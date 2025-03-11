@@ -3,12 +3,12 @@
   <groupId>BookServiceSys</groupId>
   <artifactId>BookServiceSys</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>ear</packaging>
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.2.3</version>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>3.3.0</version>
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
