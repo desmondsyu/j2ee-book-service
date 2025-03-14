@@ -4,15 +4,9 @@
     <groupId>BookServiceSys</groupId>
     <artifactId>BookServiceSys</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>ear</packaging>
+    <packaging>war</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>jakarta.servlet.jsp</groupId>
-            <artifactId>jakarta.servlet.jsp-api</artifactId>
-            <version>3.0.0</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
@@ -24,39 +18,46 @@
             <version>3.0.1</version>
             <scope>runtime</scope>
         </dependency>
-		
-		<dependency>
-    		<groupId>jakarta.ejb</groupId>
-    		<artifactId>jakarta.ejb-api</artifactId>
-    		<version>4.0.1</version>
-		</dependency>
-		
-		<dependency>
-    		<groupId>jakarta.servlet</groupId>
-    		<artifactId>jakarta.servlet-api</artifactId>
-    		<version>6.1.0</version>
-    		<scope>provided</scope>
-		</dependency>
-		
-		<dependency>
-    		<groupId>jakarta.enterprise</groupId>
-    		<artifactId>jakarta.enterprise.cdi-api</artifactId>
-    		<version>4.1.0</version>
-		</dependency>
-		
-		<dependency>
-    		<groupId>jakarta.servlet.jsp</groupId>
-    		<artifactId>jakarta.servlet.jsp-api</artifactId>
-    		<version>4.0.0</version>
-    		<scope>provided</scope>
-		</dependency>
+
+        <dependency>
+            <groupId>jakarta.ejb</groupId>
+            <artifactId>jakarta.ejb-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>10.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.cdi-api</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.servlet.jsp</groupId>
+            <artifactId>jakarta.servlet.jsp-api</artifactId>
+            <version>4.0.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <artifactId>maven-ear-plugin</artifactId>
-                <version>3.3.0</version>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -64,6 +65,11 @@
                 <configuration>
                     <release>21</release>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>5.1.2.Final</version>
             </plugin>
         </plugins>
     </build>
